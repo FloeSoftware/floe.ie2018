@@ -1,0 +1,174 @@
+@import 'src/scss/_colours';
+@import 'src/scss/_mixins';
+
+.Home-viewPort {
+  height: 100vh;
+  max-height: 750px;
+}
+
+.Home-header {
+  min-height: 20vw;
+  padding: 0 15vw;
+}
+
+.Home-headerUpper {
+  display: flex;
+  height: 140px;
+
+  &-logo {
+    color:green;
+    flex-grow: 1;
+  }
+
+  &-phone {
+    align-self: center;
+    font-weight: 300;
+    padding-top: 40px;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.Home-headerLower {
+  color: $grey;
+  font-weight: 300;
+  font-size: 1.1em;
+  padding-top: 2vw;
+  padding-left: 7vw;
+}
+
+.Home-highLevel {
+  padding: .8vw 23vw;
+
+   h1 {
+    font-size: 2.0em;
+    font-weight: 400;
+    padding-bottom: .7em;
+  }
+
+  p {
+    color: $grey;
+    padding-bottom: 1.3em;
+  }
+}
+
+.Home-gallery {
+  padding: 4vw 10vw;
+  display: flex;
+
+  .Home-gallery-plannning {
+    align-self: center;
+    flex-grow: 1;
+
+    img {
+      margin-right: 30px;
+    }
+  }
+
+  .Home-gallery-wireframing {
+    align-self: center;
+    flex-grow: 1;
+    
+  }
+}
+
+.Home-contact {
+  margin: 2vw 13vw;
+  position: relative;
+  padding-bottom: 12vw;
+  // background: red;
+
+  address {
+    font-style: normal;
+  }
+
+  &-photo {
+    position: absolute;
+    top: 5vw;
+    left: 0;
+  }
+}
+
+.Home-contact-person {
+  display: flex;
+  padding-top: 20px;
+}
+
+.Home-contact-personDetails {
+  align-self: center;
+  padding-left: 20px;
+
+  &-name {
+    color: #626262;
+    font-weight: 400;
+    line-height: 1.7em;
+  }
+
+  a {
+    font-weight: 300;
+    color: #A6A6A6 !important;
+    text-decoration: none;
+  }
+}
+
+.Home-contactCard {
+  background: #F2F5F6;
+  color: #808080;
+  text-transform: none;
+  font-style: normal !important;
+  display: block;
+  margin-left: 30%;
+  padding: 3.3vw 0 3.3vw 30%;
+
+  &-circle {
+    border-radius: 50%;
+  }
+
+  &-name {
+    color: #626262;
+    font-size: 1.1em;
+    font-weight: 500;
+    line-height: 1.0em;
+  }
+}
+
+.Home-contactCard address p {
+  line-height: 1.4em;
+  font-weight: 300;
+  padding-top: 0;
+  margin-top: 5px;
+}
+
+.Home-contactCard-telephone {
+  a {
+    color: #626262 !important;
+    font-size: 1.0em;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 1.8em;
+  }
+}
+
+.Home-contactCard-officeHours {
+  font-weight: 300;
+  // padding-top: 15px;
+}
+
+
+
+.Home-footer {
+  font-weight: 400;
+  border-top: 1px dotted rgba(255, 255, 255, .2);
+  margin: 2vw 13vw;
+  font-size: .95;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+
+  &-smallPrint {
+    color: $grey;
+    font-weight: 300;  
+    font-size: .9em;
+  }
+}

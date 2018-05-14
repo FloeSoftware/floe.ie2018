@@ -1,4 +1,5 @@
-$dark-blue: #28384A;
+@import 'scss/_colours';
+@import 'scss/_mixins';
 
 body {
   margin: 0;
@@ -6,4 +7,5 @@ body {
   font-family: sans-serif;
   background: $dark-blue;
   color: #FFFFFF;
+  font-family: 'Open Sans', sans serif;
 }
