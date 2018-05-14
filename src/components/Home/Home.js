@@ -1,4 +1,9 @@
+// @flow
+
 import React, { Component } from 'react'
+import Moment from 'react-moment'
+import 'moment-timezone'
+
 import Logo from './floe-logo.svg'
 import './Home.scss'
 
@@ -10,6 +15,7 @@ import michaelBradley from './michael-bradley.jpg'
 
 class Home extends Component {
   render() {
+
     return (
       <div className="Home">
 
@@ -51,6 +57,10 @@ class Home extends Component {
 
         <aside className="Home-contact">
           {/* <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1> */}
+
+          <div>
+            Dublin <Moment tz="Europe/Dublin" format="HH:mm:ss" interval={1000} />
+          </div>
 
           <img src={dublin} className="Home-contact-photo" alt="" />
           

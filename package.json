@@ -27,6 +27,8 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
+    "moment": "^2.22.1",
+    "moment-timezone": "^0.5.17",
     "node-sass": "^4.9.0",
     "normalize-scss": "^7.0.1",
     "object-assign": "4.1.1",
@@ -37,6 +39,7 @@
     "react": "^16.3.2",
     "react-dev-utils": "^5.0.1",
     "react-dom": "^16.3.2",
+    "react-moment": "^0.7.0",
     "resolve": "1.6.0",
     "sass-loader": "^7.0.1",
     "style-loader": "0.19.0",
@@ -94,5 +97,8 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.72.0"
   }
 }
