@@ -55,11 +55,16 @@ class Home extends Component {
           </div>
         </aside>
 
-        <aside className="Home-contact">
-          {/* <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1> */}
 
-          <div>
-            Dublin <Moment tz="Europe/Dublin" format="HH:mm:ss" interval={1000} />
+        <aside className="Home-general">
+          <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1>          
+        </aside>
+
+        <aside className="Home-contact">
+
+          <div className="Home-contact-time">
+            Dublin
+            <span><Moment tz="Europe/Dublin" format="HH:mm:ss" interval={1000} /></span>
           </div>
 
           <img src={dublin} className="Home-contact-photo" alt="" />

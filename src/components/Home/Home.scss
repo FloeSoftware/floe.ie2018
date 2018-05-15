@@ -74,11 +74,24 @@
   }
 }
 
+.Home-general {
+  margin: 12vw 13vw;
+
+  h1 {
+    font-size: 1.6em;
+    font-weight: 200;
+    text-align: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+
+    padding-bottom: 4vw;
+  }
+}
+
 .Home-contact {
   margin: 2vw 13vw;
   position: relative;
   padding-bottom: 12vw;
-  // background: red;
 
   address {
     font-style: normal;
@@ -86,8 +99,18 @@
 
   &-photo {
     position: absolute;
-    top: 6vw;
+    top: 9vw;
     left: 0;
+  }
+
+  &-time {
+
+    span {
+      color: $grey;
+      display: block;
+      font-weight: 300;
+      font-size: .85em;
+    }
   }
 }
 

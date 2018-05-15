@@ -8,7 +8,7 @@ import registerServiceWorker from './registerServiceWorker'
 
 WebFont.load({
   google: {
-    families: ['Open+Sans:300,400,500,600', 'sans-serif']
+    families: ['Open+Sans:200,300,400,500,600', 'sans-serif']
   }
 })
 
