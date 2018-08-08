@@ -1,23 +1,49 @@
 @import 'src/scss/_colours';
 @import 'src/scss/_mixins';
 
-.Home-viewPort {
-  height: 100vh;
-  max-height: 750px;
+.Home {
+  max-width: 1800px;
 }
 
+// .Home-viewPort {
+    
+// }
+
 .Home-header {
-  min-height: 20vw;
+  min-height: 19vw;
   padding: 0 15vw;
+
+  @include xs {
+    // padding: 0;
+    // height: 100vh;
+    // max-height: auto;    
+  }
 }
 
 .Home-headerUpper {
   display: flex;
   height: 140px;
 
+  @include xs {
+    height: 12vh;
+  }  
+
   &-logo {
     color:green;
     flex-grow: 1;
+
+    img {
+      width: 140px;
+    }
+
+    @include xs {
+      transform: translateY(-15px) translateX(-60px);
+      // text-align: center;
+
+      img {
+        width: 30vw;
+      }
+    }    
   }
 
   &-phone {
@@ -28,6 +54,10 @@
     a {
       text-decoration: none;
     }
+
+    @include xs {
+      display: none;
+    }
   }
 }
 
@@ -37,45 +67,93 @@
   font-size: 1.1em;
   padding-top: 2vw;
   padding-left: 7vw;
+
+  @include xs {
+    text-align: center;
+    font-size: 1em;
+    padding: 0;
+    padding-top: 0;    
+  }  
 }
 
 .Home-highLevel {
-  padding: .8vw 23vw;
+  padding: .8vw 20vw .8vw 23vw;
 
    h1 {
     font-size: 2.0em;
     font-weight: 400;
     padding-bottom: .7em;
+
+    @include xs {
+      font-size: 1.55em;
+      padding-bottom: .5em;
+      padding-top: 3vh;
+    }    
   }
 
   p {
     color: $grey;
-    padding-bottom: 1.3em;
+    padding-bottom: .4em;
+
+    @include xs {
+      font-size: .95em;
+      line-height: 1.4em;
+      padding-bottom: 0.5em;      
+    }    
   }
+
+  @include xs {
+    padding: .9vw 10vw;
+  }  
 }
 
 .Home-gallery {
   padding: 4vw 10vw;
   display: flex;
 
+  @include xs {
+    flex-wrap: wrap;
+    overflow: hidden;
+  }  
+
   .Home-gallery-plannning {
     align-self: center;
+    padding-right: 4vw;
     flex-grow: 1;
 
     img {
-      margin-right: 30px;
+      width: 100%;
     }
+
+    @include xs {
+      padding-right: 0;
+      padding-top: 16vw;      
+      padding-bottom: 16vw;
+    }    
+  }
+
+  img {
+    @include xs {
+      width: 100%;
+    } 
   }
 
   .Home-gallery-wireframing {
     align-self: center;
     flex-grow: 1;
-    
+
+    img {
+      width: 100%;           
+    }
   }
 }
 
 .Home-general {
   margin: 12vw 13vw;
+
+  @include xs {
+    margin: 32vw 5vw;
+  }  
 
   h1 {
     font-size: 1.6em;
@@ -83,8 +161,11 @@
     text-align: center;
     padding-left: 15vw;
     padding-right: 15vw;
-
     padding-bottom: 4vw;
+
+    @include xs {
+      font-size: 1.2em;
+    }    
   }
 }
 
@@ -93,6 +174,11 @@
   position: relative;
   padding-bottom: 12vw;
 
+  @include xs {
+    overflow: hidden;
+    margin: 2vw 10vw;
+  }  
+
   address {
     font-style: normal;
   }
@@ -100,10 +186,26 @@
   &-photo {
     position: absolute;
     top: 9vw;
-    left: 0;
+    left: -0.5vw;
+    width: 41vw;
+
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.05);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.05);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.05);
+
+    @include xs {
+      position: relative;
+      width: 100%;
+      left: 0;
+      top: 0;
+    }
   }
 
   &-time {
+    @include xs {
+      padding-bottom: 3vw;
+    }
+    
 
     span {
       color: $grey;
@@ -143,10 +245,15 @@
   font-style: normal !important;
   display: block;
   margin-left: 30%;
-  padding: 3.3vw 0 3.3vw 30%;
+  padding: 3.3vw 3.3vw 3.3vw 30%;
 
   &-circle {
     border-radius: 50%;
+    width: 120px;
+
+    @include xs {
+      width: 20vw;
+    }    
   }
 
   &-name {
@@ -155,6 +262,13 @@
     font-weight: 500;
     line-height: 1.0em;
   }
+
+  @include xs {
+    margin-left: 0;
+    padding: 6vw 8vw;
+    font-size: .9em;
+  }
+  
 }
 
 .Home-contactCard address p {
@@ -185,9 +299,16 @@
   font-weight: 400;
   border-top: 1px dotted rgba(255, 255, 255, .2);
   margin: 2vw 13vw;
-  font-size: .95;
+  font-size: .95em;
   padding-top: 1vw;
-  padding-bottom: 1vw;
+  padding-bottom: 1.5vw;
+
+  @include xs {
+    margin: 2vw 10vw;
+    padding-right: 15vw;
+    padding-bottom: 5vw;  
+    font-size: .8em;
+  }  
 
   &-smallPrint {
     color: $grey;

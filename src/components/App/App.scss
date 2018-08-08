@@ -1,19 +1,25 @@
 @import 'src/scss/_colours';
 
 .App {
-  // text-align: center;
+  background: $dark-blue;
+  color: $white;
+  padding-bottom: 30px;
+  -webkit-transition: background-color 500ms ease-in-out;
+  -ms-transition: background-color 500ms ease-in-out;
+  transition: background-color 500ms ease-in-out;
 
   a {
     color: $white;
   }
+
+  &White {
+    background: $white;
+  }
 }
 
-// .App-logo {
-//   animation: App-logo-spin infinite 20s linear;
-//   height: 80px;
-// }
 
-// @keyframes App-logo-spin {
-//   from { transform: rotate(0deg); }
-//   to { transform: rotate(360deg); }
-// }
+.AppWhite {
+  h1, h2, h3, p, div {
+    color: $dark-blue;
+  }
+}

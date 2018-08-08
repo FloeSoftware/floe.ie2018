@@ -1,30 +1,31 @@
-// @flow
-
 import React, { Component } from 'react'
 import Moment from 'react-moment'
 import 'moment-timezone'
+import { INTERCOM_APP_ID } from '../../constants'
 
-import Logo from './floe-logo.svg'
 import './Home.scss'
-
+import Logo from './floe-logo.svg'
 import projectPlanning from './floe-software-project-planning.jpg'
 import productWireframing from './floe-software-wireframing.jpg'
-import dublin from './dublin.jpg'
+import dublinSkyline from './dublin.jpg'
 import michaelBradley from './michael-bradley.jpg'
 
-
 class Home extends Component {
-  render() {
+  componentDidMount() {
+    window.Intercom("boot", {
+      app_id: INTERCOM_APP_ID
+    })
+  }
 
+  render() {
     return (
       <div className="Home">
+        <div className="Home-viewPort">
 
-        <div className="Home-viewPort">        
-        
           <header className="Home-header">
             <div className="Home-headerUpper">
-              <div className="Home-headerUpper-logo">          
-                <img src={Logo} width={140} alt="FLOE Software Logo" />
+              <div className="Home-headerUpper-logo">
+                <img src={Logo} alt="FLOE Software Logo" />
               </div>
               <div className="Home-headerUpper-phone">
                 <a href="tel:+35315563288">+353 (0)1 556 3288</a>
@@ -32,16 +33,16 @@ class Home extends Component {
             </div>
 
             <div className="Home-headerLower">
-              A software, strategy and design consultancy
+              Your partner for all things software
             </div>
           </header>
 
           <article className="Home-highLevel">
-            <h1>Exceptional digital products for forward-thinking businesses and organisations.</h1>
+            <h1>Exceptional digital products for tomorrow's businesses and organisations.</h1>
 
-            <p>At FLOE we help navigate our clients navigate technical terrain. Unmatched technical execution. We don't believe in short-cuts. We do things right.</p>
-            <p>We're a software consultancy with creative DNA. Where high-performance software engineering meets design. A place where high-performance engineering meets thoughtful design. Software with a human touch.</p>
-            <p>From inception to creation. Your partner for all things digital</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque tortor, elementum ut venenatis at, rhoncus eu sapien. Praesent ut consequat ligula.</p>
+            <p>Vestibulum eget gravida libero, at tristique elit. Aliquam sagittis, lacus quis sodales dignissim, turpis urna efficitur erat, eu ultricies dolor sapien vel lacus. Praesent velit ex, porttitor sed sapien scelerisque</p>
+            <p>rutrum gravida ex. Vestibulum porta consequat convallis. Curabitur id</p>
           </article>
 
         </div>
@@ -55,9 +56,8 @@ class Home extends Component {
           </div>
         </aside>
 
-
         <aside className="Home-general">
-          <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1>          
+          <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1>
         </aside>
 
         <aside className="Home-contact">
@@ -67,8 +67,7 @@ class Home extends Component {
             <span><Moment tz="Europe/Dublin" format="HH:mm:ss" interval={1000} /></span>
           </div>
 
-          <img src={dublin} className="Home-contact-photo" alt="" />
-          
+          <img src={dublinSkyline} className="Home-contact-photo" alt="Dublin Grand Canal" />
 
           <div className="Home-contactCard">
             <address>
@@ -85,23 +84,21 @@ class Home extends Component {
               <span className="Home-contactCard-officeHours">Monday - Friday: 09.00 - 17.00</span>
             </p>
 
-            
-              <div className="Home-contact-person">
-                <div>
-                  <img src={michaelBradley} alt="Michael Bradley - FLOE" width={120} className="Home-contactCard-circle" />
-                </div>
-                <div className="Home-contact-personDetails">
-                  <span className="Home-contact-personDetails-name">Michael Bradley</span><br />
-                  <a href="mailto:michael@floe.ie">michael@floe.ie</a>
-                </div>
+            <div className="Home-contact-person">
+              <div>
+                <img src={michaelBradley} alt="Michael Bradley - FLOE" className="Home-contactCard-circle" />
               </div>
-            
-          </div>
+              <div className="Home-contact-personDetails">
+                <span className="Home-contact-personDetails-name">Michael Bradley</span><br />
+                <a href="mailto:michael@floe.ie">michael@floe.ie</a>
+              </div>
+            </div>
 
+          </div>
         </aside>
 
         <footer className="Home-footer">
-          <p>Dublin Based Consultancy for all things digital</p>
+          <p>FLOE - Your partner for all things software</p>
           <p className="Home-footer-smallPrint">FLOE (FLOE Software Ltd), Company Registration No: 611865. Directors: Michael Bradley & Giustina Mizzoni</p>
         </footer>
       </div>
