@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Moment from 'react-moment'
+import Fade from 'react-reveal/Fade'
 import 'moment-timezone'
 import { INTERCOM_APP_ID } from '../../constants'
 
@@ -48,17 +49,24 @@ class Home extends Component {
         </div>
 
         <aside className="Home-gallery">
-          <div className="Home-gallery-plannning">
-            <img src={projectPlanning} alt="Software Project Planning" />
-          </div>
-          <div className="Home-gallery-wireframing">
-            <img src={productWireframing} alt="Software Project Wireframing" />
-          </div>
+          <Fade bottom>
+            <div className="Home-gallery-plannning">
+              <img src={projectPlanning} alt="Software Project Planning" />
+            </div>
+          </Fade>
+
+          <Fade bottom delay={400}>
+            <div className="Home-gallery-wireframing">
+              <img src={productWireframing} alt="Software Project Wireframing" />
+            </div>
+          </Fade>
         </aside>
 
-        <aside className="Home-general">
-          <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1>
-        </aside>
+        <Fade bottom>
+          <aside className="Home-general">
+            <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1>
+          </aside>
+        </Fade>
 
         <aside className="Home-contact">
 
