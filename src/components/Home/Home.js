@@ -41,9 +41,14 @@ class Home extends Component {
           <article className="Home-highLevel">
             <h1>Exceptional digital products for tomorrow's businesses and organisations.</h1>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec neque tortor, elementum ut venenatis at, rhoncus eu sapien. Praesent ut consequat ligula.</p>
-            <p>Vestibulum eget gravida libero, at tristique elit. Aliquam sagittis, lacus quis sodales dignissim, turpis urna efficitur erat, eu ultricies dolor sapien vel lacus. Praesent velit ex, porttitor sed sapien scelerisque</p>
-            <p>rutrum gravida ex. Vestibulum porta consequat convallis. Curabitur id</p>
+
+            <p>At FLOE we believe in doing things better. We are a Dublin-based software consultancy, where high-integrity software engineering, design and product strategy live side-by-side.</p>
+
+            <p>Our clients partner with us to help design, build and deliver compelling software products. We love pushing the envelope, and will always encourage our clients to do the same.</p>
+
+            <p>We are fortunate to work along-side clients in Europe and North America, in domains that include Computer Vision, Video and Advertising.</p>
+
+
           </article>
 
         </div>
@@ -64,7 +69,7 @@ class Home extends Component {
 
         <Fade bottom>
           <aside className="Home-general">
-            <h1>We create thoughtful digital products, that not only deliver, but excite the user</h1>
+            <h1>We create thoughtful digital products, that not only deliver, but excite the user. If you have a product in mind, we'd love to chat with you.</h1>
           </aside>
         </Fade>
 
