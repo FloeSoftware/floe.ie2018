@@ -6,11 +6,11 @@
 }
 
 // Small devices (landscape phones, 576px and up)
-// @mixin sm {
-//   @media (min-width: 576px) {
-//     @content;
-//   }
-// }
+@mixin sm {
+  @media (min-width: 576px) and (max-width: 768px) {
+    @content;
+  }
+}
 
 // Medium devices (tablets, 768px and up)
 @mixin md {

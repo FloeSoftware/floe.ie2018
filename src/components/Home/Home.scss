@@ -104,7 +104,11 @@
   }
 
   @include xs {
-    padding: .9vw 10vw;
+    padding: 14vw 10vw;
+  }
+
+  @include sm {
+    padding: 14vw 10vw;
   }
 }
 

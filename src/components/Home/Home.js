@@ -38,18 +38,15 @@ class Home extends Component {
             </div>
           </header>
 
-          <article className="Home-highLevel">
-            <h1>Exceptional digital products for tomorrow's businesses and organisations.</h1>
+          <Fade delay={300}>
+            <article className="Home-highLevel">
+              <h1>Exceptional digital products for tomorrow's businesses and organisations.</h1>
 
-
-            <p>At FLOE we believe in doing things better. We are a Dublin-based software consultancy, where high-integrity software engineering, design and product strategy live side-by-side.</p>
-
-            <p>Our clients partner with us to help design, build and deliver compelling software products. We love pushing the envelope, and will always encourage our clients to do the same.</p>
-
-            <p>We are fortunate to work along-side clients in Europe and North America, in domains that include Computer Vision, Video and Advertising.</p>
-
-
-          </article>
+              <p>At FLOE we believe in doing things better. We are a Dublin-based software consultancy, where high-integrity software engineering, design and product strategy live side-by-side.</p>
+              <p>Our clients partner with us to help design, build and deliver compelling software products. We love pushing the envelope, and will always encourage our clients to do the same.</p>
+              <p>We are fortunate to work along-side clients in Europe and North America, across various domains that include computer vision, video and online advertising.</p>
+            </article>
+          </Fade>
 
         </div>
 
@@ -67,9 +64,9 @@ class Home extends Component {
           </Fade>
         </aside>
 
-        <Fade bottom>
+        <Fade>
           <aside className="Home-general">
-            <h1>We create thoughtful digital products, that not only deliver, but excite the user. If you have a product in mind, we'd love to chat with you.</h1>
+            <h1>We create thoughtful digital products that deliver. If you have a product in mind, we'd love to chat with you.</h1>
           </aside>
         </Fade>
 
