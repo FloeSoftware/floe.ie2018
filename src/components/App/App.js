@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import ReactGA from 'react-ga'
 import Home from '../Home/Home'
 import classNames  from 'classnames'
+import { GOOGLE_ANALYTICS_ID } from '../../constants'
 import './App.scss'
 
 class App extends Component {
@@ -14,6 +16,11 @@ class App extends Component {
   componentDidMount() {
     this.handleTheme()
     window.addEventListener('scroll', this.handleTheme)
+
+    if (process.env.NODE_ENV === 'production') {
+      ReactGA.initialize(GOOGLE_ANALYTICS_ID)
+      ReactGA.pageview(window.location.pathname + window.location.search)
+    }
   }
 
   componentWillUnmount() {
